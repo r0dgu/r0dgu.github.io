@@ -478,14 +478,14 @@ body{
 
     header{
         .container{
-            transform: translate(-10%,-10%);
+            transform: translate(-18%,-10%);
             &.is-scrolling-down{
                 background-color: rgba(1, 1, 71, 0);
                 .container{
                     padding-top: 16px;
                     padding-bottom: 16px;
                 }
-                transform: translate(-10%, -100%);
+                transform: translate(-19%, -100%);
                 transition: 0.5s;
             }
     
@@ -495,7 +495,7 @@ body{
                     padding-top: 16px;
                     padding-bottom: 16px;
                 }
-                transform: translate(-10%, 1%);
+                transform: translate(-18%, 1%);
                 transition: 0.5s;
             }
         }
