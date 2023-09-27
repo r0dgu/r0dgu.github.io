@@ -478,14 +478,14 @@ body{
 
     header{
         .container{
-            transform: translate(-5%,-10%);
+            transform: translate(-8%,-10%);
             &.is-scrolling-down{
                 background-color: rgba(1, 1, 71, 0);
                 .container{
                     padding-top: 16px;
                     padding-bottom: 16px;
                 }
-                transform: translate(-5%, -100%);
+                transform: translate(-8%, -100%);
                 transition: 0.5s;
             }
     
@@ -495,7 +495,7 @@ body{
                     padding-top: 16px;
                     padding-bottom: 16px;
                 }
-                transform: translate(-5%, 1%);
+                transform: translate(-8%, 1%);
                 transition: 0.5s;
             }
         }
@@ -512,7 +512,7 @@ body{
 
         .social-media{
             position: absolute;
-            transform: translate(190%,23%);
+            transform: translate(155%,23%);
             display: block;
             gap: 40px;
             z-index: 7;
