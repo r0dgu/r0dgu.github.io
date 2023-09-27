@@ -21,7 +21,7 @@ html{
 
     @media (max-width: 1024px){
         padding-left: 64px;
-        padding-right: 64px;
+        padding-right: 50px;
     }
 }
 
@@ -130,21 +130,6 @@ header{
 
             span {
                 font-weight: 600;
-            }
-        }
-        nav {
-            display: grid;
-            grid-gap: 16px;
-            grid-template-columns: repeat(5, auto);
-
-            @media (max-width: 767px){
-                display: none;
-            }
-
-            a{
-                color: inherit;
-                font-size: 20px;
-                text-decoration: none;
             }
         }
 
@@ -490,7 +475,30 @@ body{
 
 @media screen and (max-width: 1366px) {
 
+
     header{
+        .container{
+            transform: translate(-10%,-10%);
+            &.is-scrolling-down{
+                background-color: rgba(1, 1, 71, 0);
+                .container{
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                }
+                transform: translate(-10%, -100%);
+                transition: 0.5s;
+            }
+    
+            &.is-scrolling-up{
+                background-color: rgba(1, 1, 71, 0);
+                .container{
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+                }
+                transform: translate(-10%, 1%);
+                transition: 0.5s;
+            }
+        }
         height: 100vh;
         padding-bottom: 40px;
         .info-text{
@@ -501,7 +509,70 @@ body{
                 font-size: 1.1rem;
             }
         }
+
+        .social-media{
+            position: absolute;
+            transform: translate(190%,23%);
+            display: block;
+            gap: 40px;
+            z-index: 7;
+            width: 100px;
+            i{
+                color: #fff;
+                font-size: 5rem;
+                width: 100%;
+                text-align: center;
+                margin-bottom: 1.4rem;
+            }
+        }
+        
+    
+        form{
+            position: absolute;
+            margin: 0 auto;
+            max-width: 680px;
+            width: 100%;
+            transform: translate(0,190%);
+            background-color: #2d2663;
+
+            .form-grid{
+                display: block;
+                grid-gap: 16px;
+                margin-bottom: 16px;
+
+                .form-element, .form-area{
+                    appearance: none;
+                    border: none;
+                    outline: none;
+                    background: none;
+
+                    color: #000000;
+                    display: block;
+                    width: 100%;
+                    background-color: rgb(233, 210, 210);
+                    border-radius: 8px;
+                    padding: 16px;
+
+                    font-size: 20px;
+
+                }
+
+                .form-area{
+                    grid-column: span 2;
+
+                }
+            }
+            .button {
+                padding: 16px;
+                align-items: center;
+            }
+
+            .right-align{
+                text-align: right;
+            }
+        }
     }
+}
     
     body{
         #about{
@@ -516,4 +587,3 @@ body{
             }
         }
     }
-}
