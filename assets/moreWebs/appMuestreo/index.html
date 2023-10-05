@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestreo</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div>
+    <h1>Plan de muestreo</h1>
+    </div>
+    <br>
+    <div>
+        <h3>Tamaño de lote:</h3>
+        <br>
+        <label class="search-label">
+            <input type="number" id="unidadesLotes" step="1" name="text" class="input" required="" placeholder="Ingrese las unidades del lote">
+            <kbd class="slash-icon">/</kbd>
+            <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 512 512" xml:space="preserve">
+              <g>
+                <path d="M55.146 51.887 41.588 37.786A22.926 22.926 0 0 0 46.984 23c0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c.571.593 1.339.92 2.162.92.779 0 1.518-.297 2.079-.837a3.004 3.004 0 0 0 .083-4.242zM23.984 6c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z" fill="currentColor" data-original="#000000" class=""></path>
+              </g>
+            </svg>
+          </label>
+        <br>
+        <br>
+        <h3>Seleccione el tipo de inspección</h3>
+            <div>
+                <input type="radio" id="especial" name="opcion" value="especial" class="radio-button">
+                <label for="especial">Especial</label>
+            </div>
+            <div>
+                <input type="radio" id="general" name="opcion" value="general" class="radio-button">
+                <label for="general">General</label>
+            </div>
+        <br>
+        <h3>Seleccione el nivel de inspección</h3>
+        <br>
+        <select id="inspectionLvl">
+            <option value="default">Seleccione una opcion</option>
+        </select>
+        <br>
+        <br>
+        <h3>Seleccione el tipo de muestreo</h3>
+        <br>
+        <div>
+            <input type="radio" id="simple" name="opcion2" value="simple" class="muestreoType">
+            <label for="simple">Simple</label>
+        </div>
+        <div>
+            <input type="radio" id="doble" name="opcion2" value="doble" class="muestreoType">
+            <label for="doble">Doble</label>
+        </div>
+        <div>
+            <input type="radio" id="multiple" name="opcion2" value="multiple" class="muestreoType">
+            <label for="multiple">Multiple</label>
+        </div>
+        <br>
+        <br>
+        <h3>Seleccione el nivel de calidad aceptable</h3>
+        <br>
+        <select id="nca">
+            <option value="default">Seleccione una opcion</option>
+        </select>
+
+        <button onclick="btnEnviar()">Enviar</button>
+
+        <h4>El codigo letra de la muestra es:</h4>
+        <h2><div id="resultado"></div></h2>
+        <h4>El tamaño de la muestra a tomar es:</h4>
+        <h2><div id="tmnmostra"></div></h2>
+        <h4>El numero de aceptacion (Ac) es:</h4>
+        <h2> <div id="nAccept"></div> </h2>
+        <h4>El numero de rechazo (Re) es:</h4>
+        <h2><div id="nReject"></div></h2>
+    </div>
+
+    <script src="js/script.js">
+    </script>
+</body>
+</html>

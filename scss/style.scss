@@ -454,6 +454,8 @@ body{
                 width: 500px;
                 height: 500px;
 
+                
+
                 .content {
                     width: 100%;
                     height: 100%;
@@ -461,10 +463,10 @@ body{
                     transition: transform 300ms;
                     box-shadow: 0px 0px 10px 1px #000000ee;
                     border-radius: 5px;
-                  }
+                }
                 
 
-                  .front, .back {
+                .front, .back {
                     background-color: #151515;
                     position: absolute;
                     width: 100%;
@@ -473,19 +475,35 @@ body{
                     -webkit-backface-visibility: hidden;
                     border-radius: 5px;
                     overflow: hidden;
-                  }
+                }
                 
 
-                  .back {
+                .back {
                     width: 100%;
                     height: 100%;
                     justify-content: center;
                     display: flex;
                     align-items: center;
                     overflow: hidden;
-                  }
+                    #imge{
+                        width: 100%;
+                        height: 100%;
+                        transform: translate(-80%, -1%);
+                    }
+                    h3  {
+                        z-index: 1;
+                        display: block;
+                        background-color: #00000050;
+                        text-align: center;
+                        color: #f5e1e1;
+                        width: 500px;
+                        height: 500px;
+                        font-size: 40px;
+                        transform: translate(0%,70%);
+                    }
+                }
 
-                  .back::before {
+                .back::before {
                     position: absolute;
                     content: ' ';
                     display: block;
@@ -493,9 +511,9 @@ body{
                     height: 160%;
                     background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
                     animation: rotation_481 25000ms infinite linear;
-                  }
-                  
-                  .back-content {
+                }
+                
+                .back-content {
                     position: absolute;
                     width: 99%;
                     height: 99%;
@@ -507,13 +525,13 @@ body{
                     justify-content: center;
                     align-items: center;
                     gap: 30px;
-                  }
+                }
 
-                  &:hover .content {
+                &:hover .content {
                     transform: rotateY(180deg);
-                  }
-                  
-                  @keyframes rotation_481 {
+                }
+                
+                @keyframes rotation_481 {
                     0% {
                       transform: rotateZ(0deg);
                     }
@@ -521,14 +539,15 @@ body{
                     0% {
                       transform: rotateZ(360deg);
                     }
-                  }
-                  
-                  .front {
+                }
+                
+                .front {
                     transform: rotateY(180deg);
                     color: white;
-                  }
-                  
-                  .front .front-content {
+                    z-index: 3;
+                }
+                
+                .front .front-content {
                     position: absolute;
                     width: 100%;
                     height: 100%;
@@ -536,51 +555,79 @@ body{
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
-                  }
-                  
-                  .front-content .badge {
+                }
+                
+                .front-content .badge {
                     background-color: #00000055;
                     padding: 2px 10px;
                     border-radius: 10px;
                     backdrop-filter: blur(2px);
                     width: fit-content;
-                  }
-                  
-                  .description {
+                }
+                
+                .description {
                     box-shadow: 0px 0px 10px 5px #00000088;
                     width: 100%;
                     padding: 10px;
                     background-color: #00000099;
                     backdrop-filter: blur(5px);
                     border-radius: 5px;
-                  }
-                  
-                  .title {
+                }
+                
+                .title {
                     font-size: 11px;
                     max-width: 100%;
                     display: flex;
                     justify-content: space-between;
-                  }
-                  
-                  .title p {
-                    width: 50%;
-                  }
-                  
-                  .card-footer {
+                    .comic-button {
+                        display: inline-block;
+                        padding: 10px 20px;
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #fff;
+                        background-color: #ff5252;
+                        border: 2px solid #000;
+                        border-radius: 10px;
+                        box-shadow: 5px 5px 0px #000;
+                        transition: all 0.3s ease;
+                    }
+                    
+                    .comic-button:hover {
+                        background-color: #fff;
+                        color: #ff5252;
+                        border: 2px solid #ff5252;
+                        box-shadow: 5px 5px 0px #ff5252;
+                    }
+                    
+                    .comic-button:active {
+                        background-color: #fcf414;
+                        box-shadow: none;
+                        transform: translateY(4px);
+                    }
+                }
+                
+                .title p {
+                    width: 100%;
+                    font-size: 30px;
+                }
+                
+                .card-footer {
                     color: #ffffff88;
                     margin-top: 5px;
-                    font-size: 8px;
-                  }
-                  
-                  .front .img {
+                    font-size: 20px;
+                }
+                
+                .front .img {
                     position: absolute;
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
                     object-position: center;
-                  }
-                  
-                  .circle {
+                }
+                
+                .circle {
                     width: 90px;
                     height: 90px;
                     border-radius: 50%;
@@ -588,27 +635,27 @@ body{
                     position: relative;
                     filter: blur(15px);
                     animation: floating 2600ms infinite linear;
-                  }
-                  
-                  #bottom {
+                }
+                
+                #bottom {
                     background-color: #ff8866;
                     left: 50px;
                     top: 0px;
                     width: 150px;
                     height: 150px;
                     animation-delay: -800ms;
-                  }
-                  
-                  #right {
+                }
+                
+                #right {
                     background-color: #ff2233;
                     left: 160px;
                     top: -80px;
                     width: 30px;
                     height: 30px;
                     animation-delay: -18000ms;
-                  }
-                  
-                  @keyframes floating {
+                }
+                
+                @keyframes floating {
                     0% {
                       transform: translateY(0px);
                     }
@@ -620,7 +667,7 @@ body{
                     100% {
                       transform: translateY(0px);
                     }
-                  }
+                }
             }
 
 
